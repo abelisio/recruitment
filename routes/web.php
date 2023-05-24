@@ -5,6 +5,7 @@ use App\Http\Controllers\PersonController;
 use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
 Route::get('/persons', [PersonController::class, 'index'])->name('persons.index');
 Route::get('/persons/create', [PersonController::class, 'create'])->name('persons.create');
 Route::post('/persons', [PersonController::class, 'store'])->name('persons.store');
@@ -14,7 +15,7 @@ Route::put('/persons/update/{person}', [PersonController::class, 'update'])->nam
 Route::delete('/persons/{person}', [PersonController::class, 'destroy'])->name('persons.destroy');
 
 
-Route::get('/contacts ', [ContactController::class, 'index'])->name('contacts.index');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
 Route::get('/contacts/create', [ContactController::class, 'create'])->name('contacts.create');
 Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 Route::get('/contacts/{contact}', [ContactController::class, 'show'])->name('contacts.show');

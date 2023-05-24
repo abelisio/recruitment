@@ -13,7 +13,6 @@ class PersonController extends Controller
     {
         $persons = Person::all();
         return view('person', ['persons'=> $persons]);
-        //return view('person');
 
     }
 

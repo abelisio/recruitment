@@ -10,8 +10,8 @@ class ContactController extends Controller
     public function index()
     {
         $contacts = Contact::all();
-        return view('contacts', ['contact'=> $contacts]);
-        //return view('person');
+        return view('contact', ['contacts'=> $contacts]);
+
 
     }
 
@@ -21,12 +21,13 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('contact_create');
+        return view('contacts_create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
          $contact = new Contact;
@@ -48,7 +49,7 @@ class ContactController extends Controller
      */
     public function show(contact $contact)
     {
-        return view('contact_show', ['contact'=>$contact]);
+        return view('contacts_show', [' 89'=>$contact]);
     }
 
     /**
