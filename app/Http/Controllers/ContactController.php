@@ -49,7 +49,7 @@ class ContactController extends Controller
      */
     public function show(contact $contact)
     {
-        return view('contacts_show', [' 89'=>$contact]);
+        return view('contacts_show', ['contact'=>$contact]);
     }
 
     /**
@@ -59,7 +59,7 @@ class ContactController extends Controller
     {
         $contact = Contact::findOrFail($id);
 
-        return view('contact_edit', ['contact'=>$contact]);
+        return view('contacts_edit', ['contact'=>$contact]);
     }
 
     /**
@@ -74,7 +74,7 @@ class ContactController extends Controller
 
         $contact->update($request->all());
 
-        return redirect()->route('contact.index')
+        return redirect()->route('contacts.index')
                         ->with('success','User updated successfully');
     }
 

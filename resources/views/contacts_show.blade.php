@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<form action="{{route('persons.destroy', ['person' => $person->id])}}" method="post">
+<form action="{{route('contacts.destroy', ['contact' => $contact->id])}}" method="post">
 @csrf
 <input type="hidden" name="_method" value="DELETE">
 
@@ -18,7 +18,7 @@
         </tr>
     </thead>
     <tr>
-        <th scope="row">{{ $person->name}}</th>
+        <th scope="row">{{ $contact->countrycodes}}</th>
 
     </tr>
 </tbody>
@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-lg-12 mt-1 mr-1">
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('persons.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('contacts.index') }}"> Back</a>
             </div>
         </div>
     </div>
