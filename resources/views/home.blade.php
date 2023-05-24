@@ -2,6 +2,12 @@
 
 @section('content')
 
-<h1> home</h1>
+<div id ="logo-img">
+    <a href="{{ route('home') }}">
+        <img
+          src="{{asset('assets/img/contacts-logo.jpg')}}" width="700" height="400" />
+      </a>
+    </div>
+
 
 @endsection

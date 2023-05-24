@@ -25,9 +25,9 @@ ul{
     list-style: none;
     padding: 0;
     margin: 0;
-    margin: 100px auto;
-    padding-left:200px;
-    padding-top:10px;
+    margin: 80px auto;
+    padding-left:300px;
+    padding-top:1px;
     filter: drop-shadow(5px 5px 5px #777676);
 
 }
